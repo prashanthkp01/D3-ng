@@ -1,20 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import {FormsModule} from "@angular/forms";
 
-import { AppComponent } from './app.component';
-
+import {AppComponent} from './app.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {PieChartComponent} from './pie-chart/pie-chart.component';
+import {DataService} from './data.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, DashboardComponent, PieChartComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule, FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
